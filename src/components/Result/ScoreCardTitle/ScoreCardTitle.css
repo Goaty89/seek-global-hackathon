@@ -1,0 +1,19 @@
+.scoreCardTitle {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.scoreCardTitle .scoreLabel {
+  display: inline-block;
+  vertical-align: middle;
+  width: 3%;
+  padding: 10px;
+  text-align: center;
+  height: 10px;
+  line-height: 1;
+  font-size: 18px;
+}
+
+.scoreCardTitle .scoreLabel ~ .scoreLabel {
+    margin-left: 0px;
+}
