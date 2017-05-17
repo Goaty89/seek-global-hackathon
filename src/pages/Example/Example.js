@@ -9,6 +9,7 @@ import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 import Nudge from '../../components/Nudge/Nudge';
 import Card from '../../components/Card/Card';
+import Home from '../../pages/Home/Home';
 
 export default class QueryExample extends Component {
     render() {
@@ -29,6 +30,7 @@ export default class QueryExample extends Component {
                 <Header/>
                 <div>
                     <Nudge />
+                    <Home/>
                     <p>Lorem ipsum</p>
                 </div>
                 <Footer/>
