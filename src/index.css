@@ -4,3 +4,11 @@ body {
   font-family: sans-serif;
   background: #e5e5e5;
 }
+
+.iconWarning {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  background-size: cover !important;
+  background: url(./static/warning.svg) no-repeat;
+}

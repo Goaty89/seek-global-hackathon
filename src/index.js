@@ -10,6 +10,7 @@ import './index.css';
 
 import Home from './pages/Home/Home';
 import Example from './pages/Example/Example';
+import Preview from './pages/Preview/Preview';
 
 ReactDOM.render(
     /* /src/index.js */
@@ -17,6 +18,7 @@ ReactDOM.render(
         <Route path="/" component={Root} />
         <Route path="/example" component={Example} />
         <Route path="/home" component={Home} />
+        <Route path="/preview" component={Preview} />
     </Router>,
   document.getElementById('root')
 );
