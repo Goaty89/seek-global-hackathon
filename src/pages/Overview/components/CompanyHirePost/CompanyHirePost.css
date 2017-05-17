@@ -1,0 +1,17 @@
+.icon-dmc {
+    width: 140px;
+    height: 140px;
+    background: url('/images/DMC.jpg') no-repeat;
+}
+
+.icon-maestro {
+    width: 140px;
+    height: 140px;
+    background: url('/images/MAESTRO.jpg') no-repeat;
+}
+
+.icon-mediagates360 {
+    width: 140px;
+    height: 140px;
+    background: url('/images/mediagates360.jpg') no-repeat;
+}
