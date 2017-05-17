@@ -3,10 +3,10 @@ import "./Container.css";
 
 export default class Container extends Component {
     render() {
-        const {children} = this.props;
+        const {children, className} = this.props;
 
         return (
-          <div className="container">
+          <div className={`container ${className}`}>
               {children}
           </div>
         );

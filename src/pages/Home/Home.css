@@ -1,0 +1,30 @@
+.background{
+    background: #E7E6E3;
+    height:100vh;
+    width: 100%;
+}
+
+.small-icon{
+    margin: 0 auto;
+    /*background: url(../../static/LogoAnimate.gif) no-repeat !important;*/
+}
+
+.background-yellow{
+    background: #FFFCC3;
+}
+
+.background-light-grey{
+    background: #F4F3F2;
+}
+
+.card-flex-center{
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (min-width: 800px) {
+    .small-icon {
+        width: 450px !important;
+        height: 450px !important;
+    }
+}
