@@ -1,0 +1,48 @@
+.nudge .logoContainer,
+.nudge .nudgeContent {
+    display: table-cell;
+    vertical-align: middle;
+}
+.nudge .nudgeContent {
+    padding-left: 25px;
+}
+
+.nudge .nudgeContent .nudgeTitle {
+    font-size: 22px;
+    text-align: center;
+}
+.nudge .nudgeContent .btnWrapper {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.nudge .nudgeContent .btn {
+    display: inline-block;
+    margin-bottom: 0;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 26px;
+    font-size: 14px;
+    line-height: 1.428571429;
+    border-radius: 3px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -webkit-transition: border .2s linear,color .2s linear,background-color .2s linear;
+    transition: border .2s linear,color .2s linear,background-color .2s linear;
+    outline: 0;
+    font-weight: 700;
+}
+
+.nudge .nudgeContent .btn.btnFillUp {
+    color: #333;
+    background-color: #fff200;
+    border-color: transparent;
+}

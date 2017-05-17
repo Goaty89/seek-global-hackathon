@@ -1,0 +1,26 @@
+import React, {Component} from 'react';
+import Card from '../Card/Card';
+import Logo from '../Logo/Logo'
+
+import './Nudge.css';
+
+export default class Nudge extends Component {
+    render() {
+        return (
+          <div className='nudge'>
+              <Card>
+                <div className='logoContainer'>
+                    <Logo/>
+                </div>
+                <div className='nudgeContent'>
+                    <div className='nudgeTitle'>Wanna know your personality skill?</div>
+                    <div className='nudgeTitle'>Leading you to the more success future</div>
+                    <div className='btnWrapper'>
+                        <button className='btn btnFillUp'>Fill up for free now</button>
+                    </div>
+                </div>
+              </Card>
+          </div>
+        );
+    }
+}
