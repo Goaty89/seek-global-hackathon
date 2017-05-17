@@ -17,7 +17,7 @@ export default class Card extends Component {
     }
 
     render() {
-        const {children, extraTopMargin, className} =  this.props;
+        const {children, extraTopMargin, className, closeButton} =  this.props;
 
         return (
           <div>
@@ -25,7 +25,7 @@ export default class Card extends Component {
                  this.state.hideCard ?
                   null :
                   <div className={`background-card ${extraTopMargin ? 'extraTopMargin' : ''} ${className}`}>
-                      <div className='icon-close' onClick={this.dismissCard.bind(this)}>x</div>
+                      {closeButton ? <div className='icon-close' onClick={this.dismissCard.bind(this)}>x</div> : null}
                       <div>
                           {children}
                       </div>

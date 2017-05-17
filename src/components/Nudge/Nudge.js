@@ -8,9 +8,9 @@ export default class Nudge extends Component {
     render() {
         return (
           <div className='nudge'>
-              <Card>
+              <Card closeButton>
                 <div className='logoContainer'>
-                    <Logo/>
+                    <Logo className="extra-small-icon"/>
                 </div>
                 <div className='nudgeContent'>
                     <div className='nudgeTitle'>Wanna know your personality skill?</div>
