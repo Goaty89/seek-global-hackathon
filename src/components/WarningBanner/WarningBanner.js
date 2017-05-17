@@ -4,9 +4,6 @@ import Card from '../Card/Card';
 import './WarningBanner.css';
 
 export default class WarningBanner extends Component {
-    constructor(props) {
-        super(props);
-    }
 
     render() {
         const {iconName, textContent} =  this.props;
