@@ -59,3 +59,11 @@ body {
   margin-top: 18px;
 }
 /*END margin*/
+
+.iconWarning {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  background-size: cover !important;
+  background: url(./static/warning.svg) no-repeat;
+}

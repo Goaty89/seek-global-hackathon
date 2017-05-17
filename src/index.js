@@ -11,13 +11,18 @@ import './index.css';
 import Home from './pages/Home/Home';
 import Example from './pages/Example/Example';
 import Overview from './pages/Overview/Overview';
+import Question from './pages/Question/Question';
+import Preview from './pages/Preview/Preview';
+
 
 ReactDOM.render(
     /* /src/index.js */
     <Router history={browserHistory}>
-        <Route path="/" component={Root} />
-        <Route path="/example" component={Example} />
-        <Route path="/home" component={Home} />
+        <Route path='/' component={Root} />
+        <Route path='/example' component={Example} />
+        <Route path='/questions/:id' component={Question} />
+        <Route path='/home' component={Home} />
+        <Route path='/preview' component={Preview} />
         <Route path="/overview" component={Overview} />
     </Router>,
   document.getElementById('root')
