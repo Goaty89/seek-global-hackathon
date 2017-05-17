@@ -1,0 +1,6 @@
+header {
+    background: url(../../static/header.jpg) no-repeat;
+    width: 100%;
+    height: 70px;
+    background-size: cover;
+}

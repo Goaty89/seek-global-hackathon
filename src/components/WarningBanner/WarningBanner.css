@@ -1,0 +1,23 @@
+.warningCard {
+    background: #FFFCC3;
+    margin-top: 15px;
+}
+
+.warningCard .twoBox {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.warningCard .warningCardContent {
+    padding-left: 25px;
+}
+
+
+.warningCard .warningCardContent {
+    padding-left: 50px;
+}
+
+.warningCard .warningCardContent .textContent {
+    font-size: 22px;
+    text-align: center;
+}

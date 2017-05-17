@@ -1,10 +1,13 @@
-.card {
-    background-color: #fff;
+.background-card {
+    width: 100%;
+    background: #FEFEFE;
+    line-height: 27px;
     border: 1px solid transparent;
     border-radius: 2px;
     -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.05);
     box-shadow: 0 1px 1px rgba(0,0,0,0.05);
-    padding: 10px;
+    box-sizing: border-box;
+    padding: 15px;
 }
 
 .icon-close {
@@ -12,4 +15,8 @@
     font-weight: 700;
     float: right;
     cursor: pointer;
+}
+
+.extraTopMargin {
+    margin-top: 18px;
 }

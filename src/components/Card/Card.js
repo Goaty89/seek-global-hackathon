@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-
 import './Card.css';
 
 export default class Card extends Component {
@@ -18,16 +17,18 @@ export default class Card extends Component {
     }
 
     render() {
-        const {children} = this.props;
+        const {children, extraTopMargin, className, closeButton} =  this.props;
 
         return (
           <div>
               {
                  this.state.hideCard ?
                   null :
-                  <div className='card'>
-                      <div className='icon-close' onClick={this.dismissCard.bind(this)}>x</div>
-                      <div>{children}</div>
+                  <div className={`background-card ${extraTopMargin ? 'extraTopMargin' : ''} ${className}`}>
+                      {closeButton ? <div className='icon-close' onClick={this.dismissCard.bind(this)}>x</div> : null}
+                      <div>
+                          {children}
+                      </div>
                   </div>
               }
           </div>
