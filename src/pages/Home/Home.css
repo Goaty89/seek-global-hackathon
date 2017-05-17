@@ -5,33 +5,8 @@
 }
 
 .small-icon{
+    display: block !important;
     margin: 0 auto;
-    /*background: url(../../static/LogoAnimate.gif) no-repeat !important;*/
-}
-
-.background-yellow{
-    background: #FFFCC3 !important;
-}
-
-.background-light-grey{
-    background: #F4F3F2;
-}
-
-.card-flex-center{
-    display: flex;
-    justify-content: center;
-}
-
-.padding-width{
-    padding: 0 9px !important;
-}
-
-.padding-width-percentage-10{
-    padding: 0 10% !important;
-}
-
-.padding-height{
-    padding: 27px !important;
 }
 
 @media screen and (min-width: 800px) {

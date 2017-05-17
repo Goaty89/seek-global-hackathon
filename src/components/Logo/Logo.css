@@ -1,7 +1,10 @@
 .logo {
-    display: block;
+    display: inline-block;
+    background-size: cover !important;
+}
+
+.defaultLogo {
     width: 300px;
     height: 300px;
-    background-size: cover !important;
     background: url(../../static/logo.png) no-repeat;
 }

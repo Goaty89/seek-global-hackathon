@@ -6,33 +6,34 @@ export default class Card extends Component {
         super(props);
 
         this.state = {
-          hideCard: false
+            hideCard: false
         }
     }
 
     dismissCard() {
-      this.setState({
+        this.setState({
             hideCard : true
-      });
+        });
     }
 
     render() {
-        const {children, extraTopMargin, className, closeButton} =  this.props;
+        const {children, extraTopMargin, className, closeButton, removeExtraPadding} =  this.props;
 
         return (
-          <div>
-              {
-                 this.state.hideCard ?
-                  null :
-                  <div className={`background-card ${extraTopMargin ? 'extraTopMargin' : ''} ${className}`}>
-                      {closeButton ? <div className='icon-close' onClick={this.dismissCard.bind(this)}>x</div> : null}
-                      <div>
-                          {children}
-                      </div>
-                  </div>
-              }
-          </div>
+            <div>
+                {
+                    this.state.hideCard ?
+                        null :
+                        <div className={`background-card ${extraTopMargin ? 'extraTopMargin' : ''} ${className} ${removeExtraPadding ? '' : 'padding-width-percentage-5'}`}>
+                            {closeButton ? <div className='icon-close' onClick={this.dismissCard.bind(this)}>x</div> : null}
+                            <div>
+                                {children}
+                            </div>
+                        </div>
+                }
+            </div>
         );
 
     }
 }
+

@@ -17,6 +17,25 @@
     cursor: pointer;
 }
 
-.extraTopMargin {
-    margin-top: 18px;
+.card-description{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 800px) {
+    .card-description {
+        flex-direction: row;
+    }
+}
+
+.background-card h2 {
+    padding-top: 18px;
+    padding-bottom: 9px;
+}
+
+.background-card p,
+.background-card h2,
+.background-card h3{
+    margin: 0;
 }

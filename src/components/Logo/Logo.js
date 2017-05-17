@@ -3,10 +3,10 @@ import './Logo.css';
 
 export default class Logo extends Component {
     render() {
-        const {className} = this.props;
+        const {className, customLogo} = this.props;
 
         return (
-            <i className={`logo ${className}`} />
+            <i className={`logo ${customLogo || 'defaultLogo'} ${className}`} />
         );
     }
 }

@@ -7,7 +7,7 @@ export default class Button extends Component {
         const {url, children}=this.props;
 
         return(
-            <Link to={url} className="button background-sharp-yellow" >
+            <Link to={url} className="button background-yellow-sharp" >
                 {children || 'Submit'}
             </Link>
         );
