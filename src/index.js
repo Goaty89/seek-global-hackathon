@@ -22,7 +22,7 @@ ReactDOM.render(
         <Route path='/example' component={Example} />
         <Route path='/questions/:id' component={Question} />
         <Route path='/home' component={Home} />
-        <Route path='/preview' component={Preview} />
+        <Route path='/preview/:id' component={Preview} />
         <Route path='/overview' component={Overview} />
     </Router>,
   document.getElementById('root')

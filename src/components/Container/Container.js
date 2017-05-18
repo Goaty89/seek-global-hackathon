@@ -4,7 +4,7 @@ import './Container.css';
 
 export default class Container extends Component {
     static propTypes = {
-        children: PropTypes.func,
+        children: PropTypes.any,
         className: PropTypes.string,
         verticalSpacing: PropTypes.bool
     };

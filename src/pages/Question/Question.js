@@ -77,7 +77,7 @@ export default class Question extends Component {
 
     render () {
         let id = this.props.params.id;
-        let nextLink = id === '3' ? 'overview' : 'questions/' + (parseInt(id, 10) + 1);
+        let nextLink = id === '3' ? '/overview' : '/questions/' + (parseInt(id, 10) + 1);
         let questions = questionSets[this.props.params.id] || [];
         return (
             <div id='questionsContainer'>
@@ -118,7 +118,7 @@ export default class Question extends Component {
                         </div>
                         {!this.state.answers.filter(a => a === null).length ? (
                             <div className='confirmation'>
-                                <Link className='previewLink' to='preview'>
+                                <Link className='previewLink' to={`/preview/${id}`}>
                                     <h1>Preview</h1>
                                 </Link>
                                 <Button url={nextLink}>Next</Button>
