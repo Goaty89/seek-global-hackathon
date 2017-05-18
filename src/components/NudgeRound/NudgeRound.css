@@ -16,24 +16,37 @@
     width: 120px;
     position: absolute;
     top: 10px;
-    left: 10px;
+    left: 15px;
     overflow: hidden;
 }
 
 .mirrorBody::after {
     content: '';
+    width: 70px;
     position: absolute;
-    top: -50%;
-    right: -50%;
-    bottom: -50%;
+    top: -130%;
+    right: 0;
+    bottom: 0;
     left: -50%;
     background: linear-gradient(to bottom, rgba(229, 172, 142, 0), rgba(255, 255, 255, 0.5) 50%, rgba(229, 172, 142, 0));
-    transform: rotateZ(60deg) translate(-5em, 7.5em);
-    animation: sheen 1s forwards;
+    transform: translate(0em, 100%) rotateZ(60deg);
+    animation: sheen 2.5s infinite;
 }
 
 @keyframes sheen {
     100% {
         transform: rotateZ(60deg) translate(1em, -9em);
     }
+}
+
+.middle {
+    position: absolute;
+    left: 45%;
+    top: 0;
+}
+
+.end {
+    position: absolute;
+    right: 0;
+    top: 0;
 }

@@ -8,6 +8,18 @@ export default class NudgeRound extends Component {
             <div className="mirrorFrame">
                 <div className="mirrorBody" />
             </div>
+
+            <div className="middle">
+                <div className="mirrorFrame">
+                    <div className="mirrorBody" />
+                </div>
+            </div>
+
+            <div className="end">
+                <div className="mirrorFrame">
+                    <div className="mirrorBody" />
+                </div>
+            </div>
           </div>
         );
     }
