@@ -8,6 +8,7 @@
     width: 150px;
     background: #7f0000;
     position:relative;
+    z-index: 2;
 }
 
 .mirrorBody {
@@ -42,11 +43,100 @@
 .middle {
     position: absolute;
     left: 45%;
-    top: 0;
+    top: 10%;
 }
 
-.end {
+.shadow {
+    background: radial-gradient(black 10%, grey 70%, #f06292 40%);
+    width: 165px;
+    height: 30px;
+    border-radius: 50%;
     position: absolute;
-    right: 0;
-    top: 0;
+    bottom: -12px;
+    left: -5px;
+    z-index: 1;
+    transform: rotateX(52deg);
+}
+
+.circle{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: radial-gradient(circle,rgba(255,255,255,.8),#FFFF96 50%) #FFFF96;
+    z-index: 3;
+    position: absolute;
+    animation: moveFadeX 3.05s linear 0s infinite alternate;
+}
+
+.circle::after{
+    content: '';
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: radial-gradient(circle,rgba(255,255,255,.8),yellow 50%) yellow;
+    position: absolute;
+    z-index: 4;
+    animation: moveX 3.05s linear 0s infinite alternate;
+}
+
+@keyframes travel {
+    from{}
+    to{ left: 640px; }
+}
+
+@keyframes bounce {
+    from, to {
+        bottom: 0;
+        animation-timing-function: ease-out;
+    }
+    50% {
+        bottom: 220px;
+        animation-timing-function: ease-in;
+    }
+}
+
+@keyframes moveFadeX {
+    from { left: 40%; } to { left: 60%; }
+}
+
+@keyframes moveX {
+    from { left: 40%; } to { left: 60%; }
+}
+
+@keyframes moveY {
+    from { top: 0; } to { top: 280px; }
+}
+
+.middle::after {
+    content: '';
+    position: absolute;
+    height: 250px;
+    width: 250px;
+    left: -30%;
+    top: -4%;
+    margin: 0 auto;
+    background-color: red;
+    animation-name: stretch;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    animation-delay: 0;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-play-state: running;
+}
+
+@keyframes stretch {
+    0% {
+        transform: scale(.3);
+        background-color: red;
+        border-radius: 100%;
+    }
+    50% {
+        background-color: orange;
+    }
+    100% {
+        transform: scale(1.5);
+        background-color: yellow;
+    }
 }
