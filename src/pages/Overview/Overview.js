@@ -27,7 +27,7 @@ export default class Overview extends Component {
                       </div>
                   </Card>
                   <div className="overview-main-container">
-                      <PersonalityResult/>
+                      <PersonalityResult className='main-container' extraTopMargin/>
                       <div className="aside-width">
                           <CompanyHirePost />
                           <RoleRelated />

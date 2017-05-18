@@ -8,12 +8,14 @@ import './PersonalityResult.css';
 
 export default class PersonalityResult extends Component {
     render() {
+        const {className, extraTopMargin=''} = this.props;
+
         return (
-            <div className='main-container'>
+            <div className={className}>
                 <CardTitle
                     title="Personality Overview"
                     subtitle="Who are you?"
-                    extraTopMargin>
+                    extraTopMargin={extraTopMargin}>
                     <Icons className="overview-icon-container"/>
                 </CardTitle>
                 <Card extraPadding="padding-aside">

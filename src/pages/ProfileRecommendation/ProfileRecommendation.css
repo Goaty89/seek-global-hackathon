@@ -1,0 +1,15 @@
+.profileRecommendation {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 800px) {
+    .profileRecommendation {
+        flex-direction: row;
+    }
+}
+
+.profileAside {
+    width: 35%;
+    padding-right: 9px;
+}

@@ -14,6 +14,7 @@ import Overview from './pages/Overview/Overview';
 import Question from './pages/Question/Question';
 import Preview from './pages/Preview/Preview';
 import ProfileWithNudge from './pages/ProfileWithNudge/ProfileWithNudge';
+import ProfileRecommendation from './pages/ProfileRecommendation/ProfileRecommendation';
 
 ReactDOM.render(
     /* /src/index.js */
@@ -25,6 +26,7 @@ ReactDOM.render(
         <Route path='/preview/:id' component={Preview} />
         <Route path='/overview' component={Overview} />
         <Route path='/profileWithNudge' component={ProfileWithNudge} />
+        <Route path='/profile/recommendation' component={ProfileRecommendation} />
     </Router>,
   document.getElementById('root')
 );
