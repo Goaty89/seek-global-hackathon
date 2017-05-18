@@ -6,7 +6,11 @@ import ScoreCardResult from './ScoreCardResult/ScoreCardResult';
 import './Result.css';
 
 export default class Result extends Component {
-    render() {
+    static propTypes = {
+        result: React.PropTypes.string.isRequired
+    };
+
+    render () {
         return (
           <div className='result'>
             <Card>
