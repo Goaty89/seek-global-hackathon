@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import Container from '../../components/Container/Container';
 import WarningBanner from '../../components/WarningBanner/WarningBanner';
 import Result from '../../components/Result/Result';
@@ -7,6 +8,13 @@ import Card from '../../components/Card/Card';
 import './Preview.css';
 
 export default class Preview extends Component {
+<<<<<<< HEAD
+    static propTypes = {
+        params: PropTypes.object
+    };
+
+=======
+>>>>>>> 499370a37ade595a0ba80abf04b18ed7ef45e753
     getMockPreviewResult () {
         return [{
             leftTitle: 'Cool, Reserved, Impresonal, Detached, Formal, Allof',
@@ -36,19 +44,23 @@ export default class Preview extends Component {
     }
 
     render () {
+        let id = this.props.params.id;
+        let nextLink = id === '3' ? '/overview' : '/questions/' + (parseInt(id, 10) + 1);
         return (
-          <div>
-              <Container>
-                  <div className='preview'>
-                    <WarningBanner iconName='iconWarning' textContent='This is only a preview. Please click the Continue button to complete the test'/>
-                    <Result result={this.getMockPreviewResult()}/>
+            <div>
+                <Container>
+                    <div className='preview'>
+                        <WarningBanner iconName='iconWarning' textContent='This is only a preview. Please click the Continue button to complete the test'/>
+                        <Result result={this.getMockPreviewResult()}/>
 
-                    <Card className='continueCard'>
-                      <Button>Continue</Button>
-                    </Card>
-                  </div>
-              </Container>
-          </div>
+                        <Card className='continueCard'>
+                            <Button url={nextLink}>
+                                Continue
+                            </Button>
+                        </Card>
+                    </div>
+                </Container>
+            </div>
         );
     }
 }
