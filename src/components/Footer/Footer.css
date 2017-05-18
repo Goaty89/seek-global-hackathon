@@ -4,8 +4,3 @@ footer {
     height: 70px;
     background-size: cover;
 }
-
-.stickyBottom{
-    position: absolute;
-    bottom: 0;
-}

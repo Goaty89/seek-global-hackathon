@@ -49,8 +49,14 @@ a {
   padding-right: 9px !important;
 }
 
+.padding-height{
+  padding-top: 9px !important;
+  padding-bottom: 9px !important;
+}
+
 .padding-width{
-  padding: 0 9px !important;
+  padding-left: 9px !important;
+  padding-right: 9px !important;
 }
 
 .padding-width-percentage-5{
