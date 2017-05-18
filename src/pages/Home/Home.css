@@ -6,12 +6,12 @@
 
 .small-icon{
     display: block !important;
-    margin: 0 auto;
+    margin: 9px auto 18px;
 }
 
 @media screen and (min-width: 800px) {
     .small-icon {
-        width: 450px !important;
-        height: 450px !important;
+        width: 300px !important;
+        height: 300px !important;
     }
 }

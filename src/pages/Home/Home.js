@@ -27,7 +27,7 @@ export default class Home extends Component {
                         <Button url='questions/1'>{`Let's start`}</Button>
                     </Card>
                 </Container>
-                <Footer/>
+                <Footer className="stickyBottom"/>
             </div>
         );
     }
