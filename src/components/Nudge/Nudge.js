@@ -6,9 +6,13 @@ import { Link } from 'react-router';
 import './Nudge.css';
 
 export default class Nudge extends Component {
+    constructor(props) {
+        super(props);
+    }
+
     render () {
         return (
-          <div className='nudge'>
+          <div className='nudge' ref={this.props.inputRef} >
               <Card closeButton>
                 <div className='logoContainer'>
                     <Logo className='extra-small-icon'/>
@@ -17,7 +21,7 @@ export default class Nudge extends Component {
                     <div className='nudgeTitle'>Wanna know your personality skill?</div>
                     <div className='nudgeTitle'>Leading you to the more success future</div>
                     <div className='btnWrapper'>
-                        <Link to='questions/1' className='btn btnFillUp'>Fill up for free now</Link>
+                        <Link to='home' className='btn btnFillUp'>Fill up for free now</Link>
                     </div>
                 </div>
               </Card>

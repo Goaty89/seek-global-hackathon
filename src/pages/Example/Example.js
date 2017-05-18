@@ -27,13 +27,11 @@ export default class QueryExample extends Component {
 
                 <br />
 
-                <Header/>
                 <div>
                     <Nudge />
                     <Home/>
                     <p>Lorem ipsum</p>
                 </div>
-                <Footer/>
             </Container>
         )
     }

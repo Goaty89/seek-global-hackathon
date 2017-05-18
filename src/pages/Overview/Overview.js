@@ -9,6 +9,7 @@ import PersonalityResult from './components/PersonalityResult/PersonalityResult'
 import EducationAdvice from './components/EducationAdvice/EducationAdvice';
 import RoleRelated from './components/RoleRelated/RoleRelated';
 import CompanyHirePost from './components/CompanyHirePost/CompanyHirePost';
+import {Link} from 'react-router';
 
 import "./Overview.css";
 
@@ -16,7 +17,9 @@ export default class Overview extends Component {
     render() {
         return (
             <div>
+                <Link to="/profile">
                 <Header />
+                </Link>
                 <Container>
                   <Card className="background-yellow">
                       <div className="card-description">
