@@ -3,7 +3,7 @@ import './ScoreCardTitle.css';
 
 export default class ScoreCardTitle extends Component {
 
-    renderScoreLabel() {
+    renderScoreLabel () {
         const scoreLabel = [];
 
         for (let i=0; i<10; ++i) {
@@ -13,7 +13,7 @@ export default class ScoreCardTitle extends Component {
         return scoreLabel;
     }
 
-    render() {
+    render () {
         return (
           <div className='scoreCardTitle'>
               {this.renderScoreLabel()}
