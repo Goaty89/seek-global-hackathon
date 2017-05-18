@@ -6,6 +6,7 @@ export default class BodyPicture extends Component {
         return (
           <img
               className='bodypic'
+              alt=''
               src='/images/jobstreet/body.jpg'
           />
         );

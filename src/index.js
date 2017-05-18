@@ -13,7 +13,7 @@ import Example from './pages/Example/Example';
 import Overview from './pages/Overview/Overview';
 import Question from './pages/Question/Question';
 import Preview from './pages/Preview/Preview';
-import ProfileWithNudge from './pages/ProfileWithNudge/ProfileWithNudge';
+import ProfileWithUpdate from './pages/ProfileWithUpdate/ProfileWithUpdate';
 import ProfileRecommendation from './pages/ProfileRecommendation/ProfileRecommendation';
 
 ReactDOM.render(
@@ -25,8 +25,8 @@ ReactDOM.render(
         <Route path='/home' component={Home} />
         <Route path='/preview/:id' component={Preview} />
         <Route path='/overview' component={Overview} />
-        <Route path='/profileWithNudge' component={ProfileWithNudge} />
         <Route path='/profile/recommendation' component={ProfileRecommendation} />
+        <Route path='/profile/:type' component={ProfileWithUpdate} />
     </Router>,
   document.getElementById('root')
 );

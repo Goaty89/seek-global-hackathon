@@ -8,26 +8,6 @@ import QuestionIcons from './components/QuestionIcons/QuestionIcons';
 
 import './Question.css';
 
-const icons = [{
-    header: 'Strongly Disagree',
-    inactive: 'thumb-down-grey',
-    active: 'thumb-down-red',
-}, {
-    inactive: 'a-bit-no-grey',
-    active: 'a-bit-no-red'
-}, {
-    header: 'Neither Agree or Disagree',
-    inactive: 'whatever-sign-grey',
-    active: 'whatever-sign-yellow'
-}, {
-    inactive: 'a-bit-yes-grey',
-    active: 'a-bit-yes-green'
-}, {
-    header: 'Strongly Agree',
-    inactive: 'thumb-up-grey',
-    active: 'thumb-up-green'
-}];
-
 const questionSets = {
     1: [
         'I am hard to get to know',
@@ -84,18 +64,13 @@ export default class Question extends Component {
                 <Header/>
                 <Container>
                     <div className='helper'>
-                        <QuestionIcons icons={icons} qKey={-1}/>
+                        <QuestionIcons qKey={-1} showHeaders/>
                     </div>
-                    <div className='questionSet'>
+                    <div className='questionSets'>
                         {questions.map((q, qKey) => (
-                            <div key={qKey}>
+                            <div className='questionSet' key={qKey}>
                                 <h1>{`Q${qKey + 1}: ${q}`}</h1>
-                                <QuestionIcons
-                                    icons={icons}
-                                    qKey={qKey}
-                                    answers={this.state.answers}
-                                    onClick={this.clickAnswer}
-                                />
+                                <QuestionIcons qKey={qKey} answers={this.state.answers} onClick={this.clickAnswer}/>
                             </div>
                         ))}
                     </div>

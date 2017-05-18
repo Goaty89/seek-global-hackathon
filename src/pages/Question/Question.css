@@ -1,16 +1,25 @@
 #questionsContainer .helper {
     background-color: #fffcc3;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
 }
 
-#questionsContainer .questionSet {
+#questionsContainer .helper .answersContainer {
+    width: 90%;
+}
+
+#questionsContainer .questionSets {
     background-color: #fff;
     margin: 18px 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
+#questionsContainer .questionSet {
+    width: 90%;
+}
+
 
 #questionsContainer .questionSet h1 {
     color: #2f97e5;
@@ -19,10 +28,10 @@
 #questionsContainer .answersContainer {
     display: flex;
     padding: 40px 0px;
+    justify-content: space-around;
 }
 
 #questionsContainer .answer {
-    width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -34,7 +43,6 @@
 }
 
 #questionsContainer .answer h1 {
-    width: 300px;
     margin-top: 0px;
     text-align: center;
 }

@@ -12,6 +12,7 @@
     margin-left: 5px;
     text-align: center;
     height: 50px;
+    font-size: 14px;
 }
 
 .scoreCard .scoreItem {
@@ -40,4 +41,10 @@
   border-radius: 50%;
   background: #00a950;
   vertical-align: middle;
+}
+
+@media screen and (min-width: 1300px) {
+  .scoreCard .titleBlock {
+      font-size: 16px;
+  }
 }

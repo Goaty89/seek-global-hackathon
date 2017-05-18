@@ -6,8 +6,8 @@
     display: inline-block;
     width: 70%;
 }
-
-.leftContainer .bodypic {
+.leftContainer .bodypic,
+.leftContainer .bodypicwithresult {
   margin-top: 25px;
 }
 
