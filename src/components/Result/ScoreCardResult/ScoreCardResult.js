@@ -11,9 +11,15 @@ export default class ScoreCardResult extends Component {
         const scoreCard = result.map(function (item, index) {
             return (
               <div className='scoreCard' key={index}>
-                  <div className='titleBlock'>{item.leftTitle}</div>
+                  <div className='titleBlock'>
+                      <div className='titleBlockIcon'><img src={`/images/icons/questions/${item.leftIcon}.png`} alt=''/></div>
+                      <div className='titleBlockText'>{item.leftTitle}</div>
+                  </div>
                   {parent.renderScoreItem(item.score)}
-                  <div className='titleBlock'>{item.rightTitle}</div>
+                  <div className='titleBlock'>
+                      <div className='titleRightBlockText'>{item.rightTitle}</div>
+                      <div className='titleRightBlockIcon'><img src={`/images/icons/questions/${item.rightIcon}.png`} alt=''/></div>
+                  </div>
               </div>
             );
         });

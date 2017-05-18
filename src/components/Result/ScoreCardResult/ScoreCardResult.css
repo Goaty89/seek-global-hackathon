@@ -4,15 +4,55 @@
 }
 
 .scoreCard .titleBlock {
+    position: relative;
     display: inline-block;
     vertical-align: middle;
     width: 20%;
     border: 1px solid #e5e5e5;
     padding: 10px;
     margin-left: 5px;
-    text-align: center;
     height: 50px;
     font-size: 14px;
+}
+
+.titleBlockIcon,
+.titleBlockText {
+    display: inline-block;
+}
+
+.titleBlockIcon {
+    position: absolute;
+    left: 15px;
+    top: 5px;
+}
+.titleBlockText {
+    width: 80%;
+    position: absolute;
+    right: 10px;
+    text-align: right;
+}
+.titleBlockIcon img {
+    width: 18px;
+}
+
+.titleRightBlockIcon,
+.titleRightBlockText {
+    display: inline-block;
+}
+
+.titleRightBlockIcon {
+    position: absolute;
+    right: 15px;
+    top: 5px;
+}
+.titleRightBlockText {
+    width: 80%;
+    position: absolute;
+    left: 15px;
+    text-align: left;
+}
+.titleRightBlockIcon img {
+    width: 18px;
 }
 
 .scoreCard .scoreItem {
@@ -41,10 +81,4 @@
   border-radius: 50%;
   background: #00a950;
   vertical-align: middle;
-}
-
-@media screen and (min-width: 1300px) {
-  .scoreCard .titleBlock {
-      font-size: 16px;
-  }
 }
