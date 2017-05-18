@@ -3,7 +3,7 @@ import './CardTitle.css';
 
 export default class CardWithTitle extends Component {
     render() {
-        const {extraTopMargin, title='', subtitle=''} =  this.props;
+        const {extraTopMargin, title='', subtitle='', children} =  this.props;
 
         return (
             <div className={`${extraTopMargin ? 'extraSmallTopMargin' : ''}`}>
@@ -11,6 +11,7 @@ export default class CardWithTitle extends Component {
                     title ? <div className="card-title padding-width-percentage-5">
                         <h2>{title}</h2>
                         <p>{subtitle}</p>
+                        {children}
                     </div> : null
                 }
             </div>

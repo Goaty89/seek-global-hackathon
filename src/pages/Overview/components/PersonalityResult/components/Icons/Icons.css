@@ -1,0 +1,26 @@
+.icon-container {
+    display: flex;
+}
+
+.icon-social {
+    display: inline-block;
+    background-size: contain !important;
+}
+
+.facebook {
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+    background: url('/images/facebook.png') no-repeat;
+}
+
+.twitter {
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+    background: url('/images/twitter.png') no-repeat;
+}
+
+.extraRightPadding {
+    padding-right: 9px;
+}

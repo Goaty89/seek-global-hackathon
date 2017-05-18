@@ -21,7 +21,7 @@ export default class Overview extends Component {
                       </div>
                   </div>
               </Card>
-              <div style={{display: 'flex'}}>
+              <div className="overview-main-container">
                   <PersonalityResult/>
                   <div className="aside-width">
                       <CompanyHirePost />

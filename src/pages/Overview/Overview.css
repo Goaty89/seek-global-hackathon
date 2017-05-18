@@ -1,7 +1,17 @@
+.overview-main-container{
+    display: flex;
+    flex-direction: column;
+}
+
 @media screen and (min-width: 800px) {
     .aside-width {
         width: 35%;
         display: flex;
         flex-direction: column;
+    }
+
+    .overview-main-container{
+        display: flex;
+        flex-direction: row;
     }
 }

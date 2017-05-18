@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 
 import CardTitle from '../../../../components/CardTitle/CardTitle';
 import Card from '../../../../components/Card/Card';
+import Icons from './components/Icons/Icons';
 
 import './PersonalityResult.css';
 
@@ -13,6 +14,7 @@ export default class PersonalityResult extends Component {
                     title="Personality Overview"
                     subtitle="Who are you?"
                     extraTopMargin>
+                    <Icons className="overview-icon-container"/>
                 </CardTitle>
                 <Card extraPadding="padding-aside">
                     <h2>Task Management</h2>

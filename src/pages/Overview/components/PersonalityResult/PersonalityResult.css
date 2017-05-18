@@ -4,3 +4,9 @@
         margin-right: 9px;
     }
 }
+
+.overview-icon-container {
+    position: absolute;
+    top: 9px;
+    right: 18px;
+}
