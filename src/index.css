@@ -5,6 +5,12 @@ body {
   background: #e5e5e5;
 }
 
+a {
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+}
+
 /*icon size*/
 .extra-small-icon {
   width: 150px !important;
