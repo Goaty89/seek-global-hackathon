@@ -4,7 +4,7 @@ import './FacePicture.css';
 
 export default class FacePicture extends Component {
     gotoUpdateProfile () {
-        browserHistory.push('/overview');
+        browserHistory.push('/profile/recommendation');
     }
 
     render () {
