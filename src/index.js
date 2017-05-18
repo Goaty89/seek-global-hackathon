@@ -23,7 +23,7 @@ ReactDOM.render(
         <Route path='/questions/:id' component={Question} />
         <Route path='/home' component={Home} />
         <Route path='/preview' component={Preview} />
-        <Route path="/overview" component={Overview} />
+        <Route path='/overview' component={Overview} />
     </Router>,
   document.getElementById('root')
 );
