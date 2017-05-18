@@ -39,3 +39,7 @@
 .background-card h3{
     margin: 0;
 }
+
+.insideCard {
+    display: flex;
+}

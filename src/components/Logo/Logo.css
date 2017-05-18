@@ -1,6 +1,6 @@
 .logo {
     display: inline-block;
-    background-size: cover !important;
+    background-size: contain !important;
 }
 
 .defaultLogo {

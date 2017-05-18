@@ -5,7 +5,7 @@ export default class Title extends Component {
         const {children, subTitle} = this.props;
 
         return (
-            <div>
+            <div className="color-light-blue">
                 <h2 style={{padding: '0px'}}>{children}</h2>
                 <h3 style={{paddingBottom: '9px'}}>{subTitle}</h3>
             </div>

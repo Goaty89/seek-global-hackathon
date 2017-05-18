@@ -7,6 +7,8 @@ import EducationAdvice from './components/EducationAdvice/EducationAdvice';
 import RoleRelated from './components/RoleRelated/RoleRelated';
 import CompanyHirePost from './components/CompanyHirePost/CompanyHirePost';
 
+import "./Overview.css";
+
 export default class Overview extends Component {
     render() {
         return (
@@ -19,11 +21,14 @@ export default class Overview extends Component {
                       </div>
                   </div>
               </Card>
-              <PersonalityResult />
-
-              <CompanyHirePost />
-              <RoleRelated />
-              <EducationAdvice />
+              <div style={{display: 'flex'}}>
+                  <PersonalityResult/>
+                  <div className="aside-width">
+                      <CompanyHirePost />
+                      <RoleRelated />
+                      <EducationAdvice />
+                  </div>
+              </div>
           </div>
         );
     }

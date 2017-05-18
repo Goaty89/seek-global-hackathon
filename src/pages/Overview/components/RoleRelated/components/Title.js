@@ -5,7 +5,7 @@ export default class Title extends Component {
         const {children, fitness} = this.props;
 
         return (
-            <div>
+            <div className="color-light-blue">
                 <h2 style={{display: 'inline-block'}}>{children}</h2>
                 <h2 style={{float: 'right', display: 'inline-block'}}>{fitness}</h2>
             </div>

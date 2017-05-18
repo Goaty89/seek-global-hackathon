@@ -12,6 +12,12 @@ body {
 }
 /*END icon size*/
 
+/*Font color*/
+.color-light-blue {
+  color: #2F97E4;
+}
+/*END Font color*/
+
 /*background color*/
 .background-yellow{
   background: #FFFCC3 !important;
@@ -32,6 +38,11 @@ body {
 }
 
 /*padding*/
+.padding-aside{
+  padding-left: 5% !important;
+  padding-right: 9px !important;
+}
+
 .padding-width{
   padding: 0 9px !important;
 }
@@ -66,4 +77,17 @@ body {
   height: 150px;
   background-size: cover !important;
   background: url(./static/warning.svg) no-repeat;
+}
+
+/*In card aligment*/
+.align-small-logo {
+  vertical-align: top;
+  display: inline-block;
+  padding: 0px 9px;
+}
+
+.aside-paragraph {
+  font-size: 1rem;
+  color: #2C3E50;
+  line-height: 1.2rem;
 }
