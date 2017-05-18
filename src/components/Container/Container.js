@@ -1,12 +1,24 @@
 import React, {Component} from 'react';
-import "./Container.css";
+import PropTypes from 'prop-types';
+import './Container.css';
 
 export default class Container extends Component {
-    render() {
+    static propTypes = {
+        children: PropTypes.func,
+        className: PropTypes.string,
+        verticalSpacing: PropTypes.bool
+    };
+
+    static defaultProps = {
+        className: '',
+        verticalSpacing: true
+    };
+
+    render () {
         const {children, className} = this.props;
 
         return (
-          <div className={`container ${className}`}>
+          <div className={`container ${className} ${this.props.verticalSpacing ? 'verticalSpacing' : ''}`}>
               {children}
           </div>
         );

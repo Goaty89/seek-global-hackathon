@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import './Question.css';
 import { Link } from 'react-router';
+import Container from '../../components/Container/Container';
+import Button from '../../components/Button/Button';
+import Header from '../../components/Header/Header';
+import Footer from '../../components/Footer/Footer';
+
+import './Question.css';
 
 const icons = [{
     header: 'Strongly Disagree',
@@ -72,53 +77,55 @@ export default class Question extends Component {
 
     render () {
         let id = this.props.params.id;
-        let nextLink = id === '3' ? '/' : '/questions/' + (parseInt(id, 10) + 1);
+        let nextLink = id === '3' ? 'overview' : 'questions/' + (parseInt(id, 10) + 1);
         let questions = questionSets[this.props.params.id] || [];
         return (
             <div id='questionsContainer'>
-                <div className='helper'>
-                    <div className='answersContainer'>
-                        {icons.map((icon, key) => (
-                            <div className='answer' key={key}>
-                                <h1>{icon.header || ''}</h1>
-                                <img
-                                    className='image'
-                                    alt='thumb'
-                                    src={`/images/question/${icon.inactive}.png`}
-                                />
-                            </div>
-                        ))}
-                    </div>
-                </div>
-                <div className='questionSet'>
-                    {questions.map((q, qKey) => (
-                        <div key={qKey}>
-                            <h1>{`Q${qKey + 1}: ${q}`}</h1>
+            <Header/>
+                <Container>
+                        <div className='helper'>
                             <div className='answersContainer'>
-                                {icons.map((icon, aKey) => (
-                                    <div className='answer clickable' key={aKey}>
+                                {icons.map((icon, key) => (
+                                    <div className='answer' key={key}>
+                                        <h1>{icon.header || ''}</h1>
                                         <img
                                             className='image'
                                             alt='thumb'
-                                            src={`/images/question/${aKey === this.state.answers[qKey] ? icon.active : icon.inactive}.png`}
-                                            onClick={this.clickAnswer(qKey, aKey)}
+                                            src={`/images/question/${icon.inactive}.png`}
                                         />
                                     </div>
                                 ))}
                             </div>
                         </div>
-                    ))}
-                </div>
-                {!this.state.answers.filter(a => a === null).length ? (
-                    <div className='confirmation'>
-                        <Link className='previewLink' to='/'>
-                            <h1>Preview</h1>
-                        </Link>
-                        <Link className='nextButton' to={nextLink}>
-                            <h1>Next</h1>
-                        </Link>
-                    </div>
-                ) : null}
+                        <div className='questionSet'>
+                            {questions.map((q, qKey) => (
+                                <div key={qKey}>
+                                    <h1>{`Q${qKey + 1}: ${q}`}</h1>
+                                    <div className='answersContainer'>
+                                        {icons.map((icon, aKey) => (
+                                            <div className='answer clickable' key={aKey}>
+                                                <img
+                                                    className='image'
+                                                    alt='thumb'
+                                                    src={`/images/question/${aKey === this.state.answers[qKey] ? icon.active : icon.inactive}.png`}
+                                                    onClick={this.clickAnswer(qKey, aKey)}
+                                                />
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                        {!this.state.answers.filter(a => a === null).length ? (
+                            <div className='confirmation'>
+                                <Link className='previewLink' to='preview'>
+                                    <h1>Preview</h1>
+                                </Link>
+                                <Button url={nextLink}>Next</Button>
+                            </div>
+                        ) : null}
+                </Container>
+                <Footer/>
             </div>
         );
     }

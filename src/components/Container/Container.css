@@ -2,6 +2,10 @@
     width: 100%;
     margin: 0 auto;
 }
+.verticalSpacing {
+    margin-top: 18px;
+    margin-bottom: 18px;
+}
 @media screen and (min-width: 800px) {
     .container {
         width: 90%;
