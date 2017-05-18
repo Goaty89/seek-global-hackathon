@@ -8,13 +8,10 @@ import Card from '../../components/Card/Card';
 import './Preview.css';
 
 export default class Preview extends Component {
-<<<<<<< HEAD
     static propTypes = {
         params: PropTypes.object
     };
 
-=======
->>>>>>> 499370a37ade595a0ba80abf04b18ed7ef45e753
     getMockPreviewResult () {
         return [{
             leftTitle: 'Cool, Reserved, Impresonal, Detached, Formal, Allof',
