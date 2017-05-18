@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import CardTitle from '../../../../components/CardTitle/CardTitle';
 import Card from '../../../../components/Card/Card';
 import Icons from './components/Icons/Icons';
+import Button from '../../../../components/Button/Button';
 
 import './PersonalityResult.css';
 
@@ -51,6 +52,18 @@ export default class PersonalityResult extends Component {
                     <p>You have an extraordinary ability to change your approach to best fit the situation, analyze problems and develop new solutions.</p>
                     <br />
                     <p>You have a strong ability to learn and apply new skills, adjust effectively to different and changing environments, and smoothly integrate changes into your work habits.</p>
+                </Card>
+
+                <Card className="extraSmallTopMargin privacy" extraPadding="padding-aside">
+                  <h2> Personality Privacy Setting</h2>
+
+                    <form>
+                      <input type='radio' name='privacy' value='allow' checked='checked'/> Allow employers to view my personality test result. <br />
+                      <input type='radio' name='privacy' value='not_allow' /> Do not allow employers to view my personality test result. <br />
+                    </form>
+
+                    <br />
+                    <Button>  save </Button>
                 </Card>
             </div>
         );

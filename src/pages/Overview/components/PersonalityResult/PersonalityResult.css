@@ -3,3 +3,9 @@
     top: 9px;
     right: 18px;
 }
+
+.privacy .button.background-yellow-sharp {
+    font-size: 0.9rem;
+    cursor: pointer;
+    font-weight: bold;
+}
