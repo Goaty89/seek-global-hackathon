@@ -13,20 +13,19 @@ import './ProfileWithUpdate.css';
 
 export default class ProfileWithUpdate extends Component {
     static propTypes = {
-        params: PropTypes.object
+        route: PropTypes.object
     };
 
     render () {
-        let type = this.props.params.type.toLowerCase();
+        let type = this.props.route.path;
         return (
           <div>
               <Header/>
               <Container className='profileWithNudgeContainer'>
                   <div className='leftContainer'>
                     <FacePicture/>
-                    <Nudge/>
-                    {type==='nudge' ? <BodyPicture/> : null}
-                    {type==='update' ? <BodyPictureWithResult/> : null}
+                    {type!=='/profile' ? <Nudge/> :  null }
+                    {type==='/profile' ? <BodyPictureWithResult/> : <BodyPicture/>}
                   </div>
 
                   <div className='rightContainer'>

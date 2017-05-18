@@ -17,7 +17,7 @@ export default class Nudge extends Component {
                     <div className='nudgeTitle'>Wanna know your personality skill?</div>
                     <div className='nudgeTitle'>Leading you to the more success future</div>
                     <div className='btnWrapper'>
-                        <Link to='questions/1' className='btn btnFillUp'>Fill up for free now</Link>
+                        <Link to='home' className='btn btnFillUp'>Fill up for free now</Link>
                     </div>
                 </div>
               </Card>
