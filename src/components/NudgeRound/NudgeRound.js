@@ -6,8 +6,7 @@ export default class NudgeRound extends Component {
         return (
           <div className="background-pinky">
             <div className="mirrorFrame">
-                <div className="mirrorbody" />
-                <div className="mirrorReflect" />
+                <div className="mirrorBody" />
             </div>
           </div>
         );

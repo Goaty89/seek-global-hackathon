@@ -10,22 +10,22 @@ import './Question.css';
 
 const questionSets = {
     1: [
-        'I am hard to get to know',
-        'I don\'t talk a lot',
-        'I believe in one true religion',
-        'I am not easily annoyed'
+        'I dislike loud music',
+        'I make insightful remarks',
+        'I keep my thoughts to myself',
+        'I appreciate art'
     ],
     2: [
-        'I take out time out for others',
-        'I know that I am not a special person',
-        'I take control of things',
-        'I try to forgive and forget'
+        'I value my privacy',
+        'I believe in the basic morality of other people',
+        'I enjoy listening to new ideas',
+        'I enjoy looking at flowers'
     ],
     3: [
-        'I keep in the background',
-        'I can\'t do without the company of others',
-        'I trust others',
-        'I am not easily frustrated'
+        'I don\'t like action movies',
+        'I voice out my opinions',
+        'I initiate conversations with others',
+        'I like discussing about cultural topics'
     ]
 };
 
