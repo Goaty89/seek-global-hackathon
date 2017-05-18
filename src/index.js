@@ -13,7 +13,7 @@ import Example from './pages/Example/Example';
 import Overview from './pages/Overview/Overview';
 import Question from './pages/Question/Question';
 import Preview from './pages/Preview/Preview';
-
+import ProfileWithNudge from './pages/ProfileWithNudge/ProfileWithNudge';
 
 ReactDOM.render(
     /* /src/index.js */
@@ -24,6 +24,7 @@ ReactDOM.render(
         <Route path='/home' component={Home} />
         <Route path='/preview/:id' component={Preview} />
         <Route path='/overview' component={Overview} />
+        <Route path='/profileWithNudge' component={ProfileWithNudge} />
     </Router>,
   document.getElementById('root')
 );

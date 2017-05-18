@@ -15,38 +15,44 @@ export default class EducationAdvice extends Component {
                     subtitle="Are you thinking of switching or advancing your career?"
                     extraTopMargin>
                 </CardWithTitle>
-                <Card insideCard className="icon-position-bottom" extraPadding="padding-aside">
-                    <Logo customLogo="icon-coders" />
-                    <div className="align-small-logo">
-                        <h2 className="color-light-blue">Learn Web Design</h2>
-                        <Paragraph>Kickstart your career as a freelance web designer with
-                            this course by CodersTrust. In this course, you’ll learn
-                            the skills needed to design and develop functional,
-                            responsive, interactive and industry-oriented websites.
-                            You’ll also learn business and technical English as....</Paragraph>
-                    </div>
-                </Card>
-                <Card insideCard className="extraSmallTopMargin icon-position-bottom" extraPadding="padding-aside">
-                    <Logo customLogo="icon-ethical" />
-                    <div className="align-small-logo">
-                        <h2 className="color-light-blue">Ethical Hacker</h2>
-                        <Paragraph>With this online Certified Ethical Hacker course, you’ll
-                            learn how to deploy the same tools as malicious
-                            hackers to assess weaknesses in network
-                            infrastructures and secure systems.</Paragraph>
-                    </div>
-                </Card>
-                <Card insideCard className="extraSmallTopMargin icon-position-bottom" extraPadding="padding-aside">
-                    <Logo customLogo="icon-digital" />
-                    <div className="align-small-logo">
-                        <h2 className="color-light-blue">Digital Marketing</h2>
-                        <Paragraph>This program provides an in-depth and
-                            comprehensive introduction to the core essentials of
-                            digital marketing. Validated by the Digital Marketing
-                            Institute's Industry Advisory Council, the learning
-                            content is informed and designed by experts and ....</Paragraph>
-                    </div>
-                </Card>
+                <a href="https://www.jobstreeteducation.com.my/part-time/courses/learn-web-design" target="_blank">
+                    <Card insideCard className="icon-position-bottom" extraPadding="padding-aside">
+                        <Logo customLogo="icon-coders" />
+                        <div className="align-small-logo">
+                            <h2 className="color-light-blue">Learn Web Design</h2>
+                            <Paragraph>Kickstart your career as a freelance web designer with
+                                this course by CodersTrust. In this course, you’ll learn
+                                the skills needed to design and develop functional,
+                                responsive, interactive and industry-oriented websites.
+                                You’ll also learn business and technical English as....</Paragraph>
+                        </div>
+                    </Card>
+                </a>
+                <a href="https://www.jobstreeteducation.com.my/certified-ethical-hacker" target="_blank">
+                    <Card insideCard className="extraSmallTopMargin icon-position-bottom" extraPadding="padding-aside">
+                        <Logo customLogo="icon-ethical" />
+                        <div className="align-small-logo">
+                            <h2 className="color-light-blue">Ethical Hacker</h2>
+                            <Paragraph>With this online Certified Ethical Hacker course, you’ll
+                                learn how to deploy the same tools as malicious
+                                hackers to assess weaknesses in network
+                                infrastructures and secure systems.</Paragraph>
+                        </div>
+                    </Card>
+                </a>
+                <a href="hhttps://www.jobstreeteducation.com.my/digital-marketing-institute" target="_blank">
+                    <Card insideCard className="extraSmallTopMargin icon-position-bottom" extraPadding="padding-aside">
+                        <Logo customLogo="icon-digital" />
+                        <div className="align-small-logo">
+                            <h2 className="color-light-blue">Digital Marketing</h2>
+                            <Paragraph>This program provides an in-depth and
+                                comprehensive introduction to the core essentials of
+                                digital marketing. Validated by the Digital Marketing
+                                Institute's Industry Advisory Council, the learning
+                                content is informed and designed by experts and ....</Paragraph>
+                        </div>
+                    </Card>
+                </a>
             </div>
         );
     }
