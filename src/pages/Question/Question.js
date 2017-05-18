@@ -76,8 +76,8 @@ export default class Question extends Component {
     };
 
     render () {
-        let id = this.props.params.id;
-        let nextLink = id === '3' ? '/overview' : '/questions/' + (parseInt(id, 10) + 1);
+        let id = parseInt(this.props.params.id, 10);
+        let nextLink = id === 3 ? '/overview' : '/questions/' + (id + 1);
         let questions = questionSets[this.props.params.id] || [];
         return (
             <div id='questionsContainer'>

@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import './ScoreCardResult.css';
 
 export default class ScoreCardResult extends Component {
     static propTypes = {
-        result: React.PropTypes.string.isRequired
+        result: PropTypes.array.isRequired
     };
 
     renderScoreCard (parent, result) {
