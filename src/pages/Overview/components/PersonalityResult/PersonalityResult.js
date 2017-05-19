@@ -23,7 +23,7 @@ export default class PersonalityResult extends Component {
                     <h2>Task Management</h2>
                     <p>Your Task Management is in the top 5% of the workforce. You have an extraordinary proficiency for setting goals, monitoring progress, and taking initiative to improve your work.</p>
                     <br />
-                    <p>You have an extraordinary ability to work independently, establish and meet challenging deadlines, persevere even when initially unsuccessful, and not settle for “good enough."</p>
+                    <p>You have an extraordinary ability to work independently, establish and meet challenging deadlines, persevere even when initially unsuccessful, and not settle for “good enough".</p>
                     <br />
                     <p>You excel at learning what is important to get the job done right and avoiding costly mistakes. You are also excellent at understanding new procedures and explaining them to others.</p>
                     <br />

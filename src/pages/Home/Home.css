@@ -15,18 +15,3 @@
         height: 300px !important;
     }
 }
-
-html, body {
-    height: 100%;
-    margin: 0;
-}
-.wrapper {
-    min-height: 100%;
-}
-.content {
-    padding: 20px;
-    padding-bottom: 50px;
-}
-.footer {
-    margin-top: -50px;
-}

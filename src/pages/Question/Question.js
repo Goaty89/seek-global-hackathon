@@ -60,9 +60,9 @@ export default class Question extends Component {
         let nextLink = id === 3 ? '/overview' : '/questions/' + (id + 1);
         let questions = questionSets[this.props.params.id] || [];
         return (
-            <div id='questionsContainer'>
+            <div id='questionsContainer' className="wrapper">
                 <Header/>
-                <Container>
+                <Container className="content">
                     <div className='helper'>
                         <QuestionIcons qKey={-1} showHeaders/>
                     </div>
