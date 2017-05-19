@@ -49,16 +49,32 @@ export default class Question extends Component {
         }
     }
 
+    getQuestion () {
+        let questions = questionSets[this.props.params.id] || [];
+        for (let qKey of [0, 1, 2, 3]) {
+            if (this.state.answers[qKey] === null) {
+                return (
+                    <div className='questionSet' key={qKey}>
+                        <h4 className='header'>{`Q${qKey + 1}: ${questions[qKey]}`}</h4>
+                        <QuestionIcons qKey={qKey} answers={this.state.answers} onClick={this.clickAnswer}/>
+                    </div>
+                );
+            }
+        }
+        return null;
+    }
+
     clickAnswer = (qKey, aKey) => () => {
-        this.setState({
-            answers: this.state.answers.map((a, qIndex) => qIndex === qKey ? aKey : a)
-        });
+        setTimeout(() => {
+            this.setState({
+                answers: this.state.answers.map((a, qIndex) => qIndex === qKey ? aKey : a)
+            });
+        }, 1000);
     };
 
     render () {
         let id = parseInt(this.props.params.id, 10);
         let nextLink = id === 3 ? '/overview' : '/questions/' + (id + 1);
-        let questions = questionSets[this.props.params.id] || [];
         return (
             <div id='questionsContainer'>
                 <Header/>
@@ -66,17 +82,13 @@ export default class Question extends Component {
                     <div className='helper'>
                         <QuestionIcons qKey={-1} showHeaders/>
                     </div>
-                    <div className='questionSets'>
-                        {questions.map((q, qKey) => (
-                            <div className='questionSet' key={qKey}>
-                                <h4 className='header'>{`Q${qKey + 1}: ${q}`}</h4>
-                                <QuestionIcons qKey={qKey} answers={this.state.answers} onClick={this.clickAnswer}/>
-                            </div>
-                        ))}
-                    </div>
                     {!this.state.answers.filter(a => a === null).length ? (
                         <QuestionConfirmation id={id} nextLink={nextLink}/>
-                    ) : null}
+                    ) : (
+                        <div className='questionSets'>
+                            {this.getQuestion()}
+                        </div>
+                    )}
                 </Container>
                 <Footer/>
             </div>
