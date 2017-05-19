@@ -51,14 +51,14 @@ export default class Question extends Component {
         }
     }
 
-    getQuestion () {
-        let questions = questionSets[this.props.params.id] || [];
+    getQuestion (id) {
+        let questions = questionSets[id] || [];
         for (let qKey of [0, 1, 2, 3]) {
             if (this.state.answers[qKey] === null) {
                 return (
                     <div className='questionSet' key={qKey}>
                         <div className='questionTitle'>
-                            <h4 className='header'>{`Q${qKey + 1}: ${questions[qKey]}`}</h4>
+                            <h4 className='header'>{`Q${qKey + ((id - 1) * 4) + 1}: ${questions[qKey]}`}</h4>
                             <div className='bubbleContainer'>
                                 {this.state.answers[qKey-1] ? <ChatBubble/> : null}
                             </div>
@@ -82,7 +82,7 @@ export default class Question extends Component {
             this.setState({
                 answers: this.state.answers.map((a, qIndex) => qIndex === qKey ? aKey : a)
             });
-        }, 1000);
+        }, 200);
     };
 
     mouseOverAnswer = (aKey) => () => {
@@ -111,7 +111,7 @@ export default class Question extends Component {
                         <QuestionConfirmation id={id} nextLink={nextLink}/>
                     ) : (
                         <div className='questionSets'>
-                            {this.getQuestion()}
+                            {this.getQuestion(id)}
                         </div>
                     )}
                 </Container>
