@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import {
     Router,
     Route,
-    browserHistory
+    hashHistory
 } from 'react-router';
 import './index.css';
 
@@ -19,7 +19,7 @@ import ProfileRecommendation from './pages/ProfileRecommendation/ProfileRecommen
 
 ReactDOM.render(
     /* /src/index.js */
-    <Router history={browserHistory}>
+    <Router history={hashHistory}>
         <Route path='/' component={ProfileWithUpdate} />
         <Route path='/profile' component={ProfileWithUpdate} />
         <Route path='/example' component={Example} />
