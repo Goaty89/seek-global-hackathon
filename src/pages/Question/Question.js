@@ -69,7 +69,7 @@ export default class Question extends Component {
                     <div className='questionSets'>
                         {questions.map((q, qKey) => (
                             <div className='questionSet' key={qKey}>
-                                <h1>{`Q${qKey + 1}: ${q}`}</h1>
+                                <h4 className='header'>{`Q${qKey + 1}: ${q}`}</h4>
                                 <QuestionIcons qKey={qKey} answers={this.state.answers} onClick={this.clickAnswer}/>
                             </div>
                         ))}
