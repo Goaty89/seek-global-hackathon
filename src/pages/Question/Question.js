@@ -38,7 +38,8 @@ export default class Question extends Component {
     constructor (props) {
         super(props);
         this.state = {
-            answers: [null, null, null, null]
+            answers: [null, null, null, null],
+            hovered: null
         };
     }
 
@@ -50,8 +51,7 @@ export default class Question extends Component {
         }
     }
 
-    getQuestion () {
-        const id = this.props.params.id;
+    getQuestion (id) {
         let questions = questionSets[id] || [];
         for (let qKey of [0, 1, 2, 3]) {
             if (this.state.answers[qKey] === null) {
@@ -60,10 +60,16 @@ export default class Question extends Component {
                           <div className='questionTitle'>
                             <h4 className='header'>{`Q${qKey + 1}: ${questions[qKey]}`}</h4>
                             <div className='bubbleContainer'>
-                              {this.state.answers[qKey-1] || id!=='1'? <ChatBubble questionSet={id} question={qKey}/> : null}
+                              {this.state.answers[qKey-1] || id!==1? <ChatBubble questionSet={id} question={qKey}/> : null}
                             </div>
-                          </div>
-                        <QuestionIcons qKey={qKey} answers={this.state.answers} onClick={this.clickAnswer}/>
+                        </div>
+                        <QuestionIcons
+                            qKey={qKey}
+                            hovered={this.state.hovered}
+                            onClick={this.clickAnswer}
+                            onMouseOver={this.mouseOverAnswer}
+                            onMouseOut={this.mouseOutAnswer}
+                        />
                     </div>
                 );
             }
@@ -76,16 +82,28 @@ export default class Question extends Component {
             this.setState({
                 answers: this.state.answers.map((a, qIndex) => qIndex === qKey ? aKey : a)
             });
-        }, 1000);
+        }, 200);
+    };
+
+    mouseOverAnswer = (aKey) => () => {
+        this.setState({
+            hovered: aKey
+        });
+    };
+
+    mouseOutAnswer = () => {
+        this.setState({
+            hovered: null
+        });
     };
 
     render () {
         let id = parseInt(this.props.params.id, 10);
         let nextLink = id === 3 ? '/overview' : '/questions/' + (id + 1);
         return (
-            <div id='questionsContainer'>
+            <div id='questionsContainer' className="wrapper">
                 <Header/>
-                <Container>
+                <Container className="content">
                     <div className='helper'>
                         <QuestionIcons qKey={-1} showHeaders/>
                     </div>
@@ -93,7 +111,7 @@ export default class Question extends Component {
                         <QuestionConfirmation id={id} nextLink={nextLink}/>
                     ) : (
                         <div className='questionSets'>
-                            {this.getQuestion()}
+                            {this.getQuestion(id)}
                         </div>
                     )}
                 </Container>

@@ -103,3 +103,13 @@ a {
   color: #2C3E50;
   line-height: 1.2rem;
 }
+
+.wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+}

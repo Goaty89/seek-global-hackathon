@@ -23,9 +23,11 @@ const icons = [{
 
 export default function QuestionConfirmation ({
     qKey,
+    hovered = null,
     showHeaders = false,
-    answers = [],
-    onClick = () => {}
+    onClick = () => {},
+    onMouseOver = () => {},
+    onMouseOut = () => {}
 }) {
     return (
         <div className='answersContainer'>
@@ -35,8 +37,10 @@ export default function QuestionConfirmation ({
                     <img
                         className='image'
                         alt='thumb'
-                        src={require(`../../../../static/images/question/${qKey !== -1 && aKey === answers[qKey] ? icon.active : icon.inactive}.png`)}
+                        src={require(`../../../../static/images/question/${hovered === aKey ? icon.active : icon.inactive}.png`)}
                         onClick={onClick(qKey, aKey)}
+                        onMouseOver={onMouseOver(aKey)}
+                        onMouseOut={onMouseOut}
                     />
                 </div>
             ))}
@@ -47,6 +51,8 @@ export default function QuestionConfirmation ({
 QuestionConfirmation.propTypes = {
     qKey: PropTypes.number,
     onClick: PropTypes.func,
-    answers: PropTypes.array,
-    showHeaders: PropTypes.bool
+    showHeaders: PropTypes.bool,
+    hovered: PropTypes.number,
+    onMouseOver: PropTypes.func,
+    onMouseOut: PropTypes.func
 };
