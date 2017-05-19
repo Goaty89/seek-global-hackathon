@@ -7,7 +7,7 @@ export default class BodyPicture extends Component {
           <img
               className='bodypic'
               alt=''
-              src='/images/jobstreet/body.jpg'
+              src='../../static/images/jobstreet/body.jpg'
           />
         );
     }

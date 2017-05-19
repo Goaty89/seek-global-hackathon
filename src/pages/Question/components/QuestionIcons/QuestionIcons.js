@@ -35,7 +35,7 @@ export default function QuestionConfirmation ({
                     <img
                         className='image'
                         alt='thumb'
-                        src={`/images/question/${qKey !== -1 && aKey === answers[qKey] ? icon.active : icon.inactive}.png`}
+                        src={`../../../../static/images/question/${qKey !== -1 && aKey === answers[qKey] ? icon.active : icon.inactive}.png`}
                         onClick={onClick(qKey, aKey)}
                     />
                 </div>

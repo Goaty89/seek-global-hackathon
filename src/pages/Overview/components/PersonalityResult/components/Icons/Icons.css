@@ -11,14 +11,14 @@
     width: 45px;
     height: 45px;
     min-width: 45px;
-    background: url('/images/icons/facebook.png') no-repeat;
+    background: url('../../../../../../static/images/icons/facebook.png') no-repeat;
 }
 
 .twitter {
     width: 45px;
     height: 45px;
     min-width: 45px;
-    background: url('/images/icons/twitter.png') no-repeat;
+    background: url('../../../../../../static/images/icons/twitter.png') no-repeat;
 }
 
 .extraRightPadding {
