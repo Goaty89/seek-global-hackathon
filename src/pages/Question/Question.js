@@ -5,6 +5,7 @@ import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 import QuestionConfirmation from './components/QuestionConfirmation/QuestionConfirmation';
 import QuestionIcons from './components/QuestionIcons/QuestionIcons';
+import ChatBubble from '../../components/ChatBubble/ChatBubble';
 
 import './Question.css';
 
@@ -56,7 +57,12 @@ export default class Question extends Component {
             if (this.state.answers[qKey] === null) {
                 return (
                     <div className='questionSet' key={qKey}>
-                        <h4 className='header'>{`Q${qKey + 1}: ${questions[qKey]}`}</h4>
+                        <div className='questionTitle'>
+                            <h4 className='header'>{`Q${qKey + 1}: ${questions[qKey]}`}</h4>
+                            <div className='bubbleContainer'>
+                                {this.state.answers[qKey-1] ? <ChatBubble/> : null}
+                            </div>
+                        </div>
                         <QuestionIcons
                             qKey={qKey}
                             hovered={this.state.hovered}
