@@ -37,7 +37,8 @@ export default class Question extends Component {
     constructor (props) {
         super(props);
         this.state = {
-            answers: [null, null, null, null]
+            answers: [null, null, null, null],
+            hovered: null
         };
     }
 
@@ -56,7 +57,13 @@ export default class Question extends Component {
                 return (
                     <div className='questionSet' key={qKey}>
                         <h4 className='header'>{`Q${qKey + 1}: ${questions[qKey]}`}</h4>
-                        <QuestionIcons qKey={qKey} answers={this.state.answers} onClick={this.clickAnswer}/>
+                        <QuestionIcons
+                            qKey={qKey}
+                            hovered={this.state.hovered}
+                            onClick={this.clickAnswer}
+                            onMouseOver={this.mouseOverAnswer}
+                            onMouseOut={this.mouseOutAnswer}
+                        />
                     </div>
                 );
             }
@@ -70,6 +77,18 @@ export default class Question extends Component {
                 answers: this.state.answers.map((a, qIndex) => qIndex === qKey ? aKey : a)
             });
         }, 1000);
+    };
+
+    mouseOverAnswer = (aKey) => () => {
+        this.setState({
+            hovered: aKey
+        });
+    };
+
+    mouseOutAnswer = () => {
+        this.setState({
+            hovered: null
+        });
     };
 
     render () {
