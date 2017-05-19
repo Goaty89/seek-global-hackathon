@@ -9,6 +9,11 @@
     margin: 9px auto 18px;
 }
 
+.animatedLogo {
+    border-radius: 50%;
+    background: url(../../static/LogoAnimate.gif) no-repeat;
+}
+
 @media screen and (min-width: 800px) {
     .small-icon {
         width: 300px !important;

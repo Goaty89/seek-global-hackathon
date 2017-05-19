@@ -20,7 +20,7 @@ export default class Home extends Component {
                         In this test, there are no right or wrong answers. Simply answer in a way that is most like you.
                     </Card>
                     <Card extraTopMargin className='padding-width-percentage-10'>
-                        <Logo className='small-icon' />
+                        <Logo className='small-icon' customLogo="animatedLogo" />
                         <p className="padding-height">16PF personality test is used by employers for employment, promotion, coaching, and career development. Completing this test will greatly increase your chances of winning that dream job!</p>
                     </Card>
                     <Card className='background-light-grey card-flex-center padding-large' extraTopMargin>
