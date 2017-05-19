@@ -7,7 +7,7 @@ export default class BodyPictureWithResult extends Component {
           <img
               className='bodypicwithresult'
               alt=''
-              src='../../static/images/jobstreet/after-body.jpg'
+              src={require('../../static/images/jobstreet/after-body.jpg')}
           />
         );
     }

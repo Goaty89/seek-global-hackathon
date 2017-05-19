@@ -7,7 +7,7 @@ export default class SideBarPicture extends Component {
           <img
               className='sidebarpic'
               alt='thumb'
-              src='../../static/images/jobstreet/sidebar.jpg'
+              src={require('../../static/images/jobstreet/sidebar.jpg')}
           />
         );
     }

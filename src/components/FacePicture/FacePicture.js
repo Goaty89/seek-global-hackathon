@@ -9,7 +9,7 @@ export default class FacePicture extends Component {
             <Link to="/profile/recommendation">
               <img
                   className='facepic'
-                  src='../../static/images/jobstreet/facepic.jpg'
+                  src={require('../../static/images/jobstreet/facepic.jpg')}
                   alt=''
               />
             </Link>
