@@ -31,11 +31,11 @@ export default function QuestionConfirmation ({
         <div className='answersContainer'>
             {icons.map((icon, aKey) => (
                 <div className='answer clickable' key={aKey}>
-                    {showHeaders ? <h1>{icon.header || ''}</h1> : null}
+                    {showHeaders ? <h4 className='header'>{icon.header || ''}</h4> : null}
                     <img
                         className='image'
                         alt='thumb'
-                        src={`../../../../static/images/question/${qKey !== -1 && aKey === answers[qKey] ? icon.active : icon.inactive}.png`}
+                        src={require(`../../../../static/images/question/${qKey !== -1 && aKey === answers[qKey] ? icon.active : icon.inactive}.png`)}
                         onClick={onClick(qKey, aKey)}
                     />
                 </div>

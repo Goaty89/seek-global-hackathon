@@ -7,7 +7,7 @@ export default function QuestionConfirmation ({id, nextLink}) {
     return (
         <div className='confirmation'>
             <Link className='previewLink' to={`/preview/${id}`}>
-                <h1>Preview</h1>
+                <h1 className='header'>Preview</h1>
             </Link>
             <Button url={nextLink}>Next</Button>
         </div>
