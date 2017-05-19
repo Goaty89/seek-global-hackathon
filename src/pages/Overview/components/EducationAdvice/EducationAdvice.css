@@ -2,21 +2,21 @@
     width: 140px;
     height: 140px;
     min-width: 140px;
-    background: url('/images/codersTrust.jpg') no-repeat;
+    background: url('../../../../static/images/codersTrust.jpg') no-repeat;
 }
 
 .icon-ethical {
     width: 140px;
     height: 140px;
     min-width: 140px;
-    background: url('/images/skillsoft.jpg') no-repeat;
+    background: url('../../../../static/images/skillsoft.jpg') no-repeat;
 }
 
 .icon-digital {
     width: 140px;
     height: 140px;
     min-width: 140px;
-    background: url('/images/digital_marketing_institute.jpg') no-repeat;
+    background: url('../../../../static/images/digital_marketing_institute.jpg') no-repeat;
 }
 
 .icon-position-bottom .insideCard{

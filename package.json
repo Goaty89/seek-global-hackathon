@@ -12,6 +12,7 @@
     "babel-eslint": "^7.2.3",
     "eslint": "^3.19.0",
     "eslint-plugin-react": "^7.0.1",
+    "gh-pages": "^1.0.0",
     "react-scripts": "0.9.5",
     "style-loader": "^0.17.0"
   },
@@ -19,6 +20,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  }
+    "eject": "react-scripts eject",
+    "deploy": "npm run build&&gh-pages -d build"
+  },
+  "homepage": "https://Goaty89.github.io/seek-global-hackathon"
 }
