@@ -5,6 +5,7 @@ import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 import QuestionConfirmation from './components/QuestionConfirmation/QuestionConfirmation';
 import QuestionIcons from './components/QuestionIcons/QuestionIcons';
+import ChatBubble from '../../components/ChatBubble/ChatBubble';
 
 import './Question.css';
 
@@ -69,7 +70,12 @@ export default class Question extends Component {
                     <div className='questionSets'>
                         {questions.map((q, qKey) => (
                             <div className='questionSet' key={qKey}>
-                                <h1>{`Q${qKey + 1}: ${q}`}</h1>
+                                <div className='questionTitle'>
+                                  <h1>{`Q${qKey + 1}: ${q}`}</h1>
+                                  <div className='bubbleContainer'>
+                                    {this.state.answers[qKey] ? <ChatBubble/> : null}
+                                  </div>
+                                </div>
                                 <QuestionIcons qKey={qKey} answers={this.state.answers} onClick={this.clickAnswer}/>
                             </div>
                         ))}
