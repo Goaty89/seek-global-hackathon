@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
+import Header from '../../components/Header/Header';
+import Footer from '../../components/Footer/Footer';
 import Container from '../../components/Container/Container';
 import WarningBanner from '../../components/WarningBanner/WarningBanner';
 import Result from '../../components/Result/Result';
@@ -73,6 +75,7 @@ export default class Preview extends Component {
         let nextLink = id === 3 ? '/overview' : '/questions/' + (id + 1);
         return (
             <div>
+                <Header />
                 <Container>
                     <div className='preview'>
                         <WarningBanner iconName='iconWarning' textContent='This is only a preview. Please click the Continue button to complete the test'/>
@@ -85,6 +88,7 @@ export default class Preview extends Component {
                         </Card>
                     </div>
                 </Container>
+                <Footer />
             </div>
         );
     }
