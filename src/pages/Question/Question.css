@@ -58,6 +58,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 0px 50px;
+    margin: 18px 0px;
 }
 
 #questionsContainer .previewLink {
@@ -76,4 +77,19 @@
 #questionsContainer .nextButton .header {
     margin: 0px;
     color: #000;
+}
+
+#questionsContainer .questionTitle {
+    position: relative;
+}
+
+#questionsContainer .questionTitle h4,
+#questionsContainer .questionTitle .bubbleContainer {
+    display: inline-block;
+}
+
+#questionsContainer .questionTitle .bubbleContainer  {
+    position: absolute;
+    top: 5px;
+    margin-left: 25px;
 }
